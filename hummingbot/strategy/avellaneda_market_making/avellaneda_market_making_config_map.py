@@ -131,7 +131,7 @@ avellaneda_market_making_config_map = {
                          "it will increase the minimum and maximum spread value) >>> ",
                   type_str="decimal",
                   required_if=lambda: avellaneda_market_making_config_map.get("parameters_based_on_spread").value,
-                  validator=lambda v: validate_decimal(v, 0, 10, inclusive=True),
+                  validator=lambda v: validate_decimal(v, 0, 100, inclusive=True),
                   prompt_on_new=True),
     "volatility_sensibility":
         ConfigVar(key="volatility_sensibility",
