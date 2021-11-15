@@ -183,8 +183,8 @@ avellaneda_market_making_config_map = {
         ConfigVar(key="order_refresh_time",
                   prompt="How often do you want to cancel and replace bids and asks "
                          "(in seconds)? >>> ",
-                  type_str="float",
-                  validator=lambda v: validate_decimal(v, 0, inclusive=False),
+                  type_str="decimal",
+                  validator=lambda v: validate_decimal(v, 0, 120, inclusive=False),
                   prompt_on_new=True),
     "max_order_age":
         ConfigVar(key="max_order_age",
